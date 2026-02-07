@@ -41,6 +41,16 @@ function Login() {
       cursor: "pointer",
       marginTop: "10px",
     },
+    registerButton: {
+      width: "100%",
+      padding: "10px",
+      backgroundColor: "#28a745",
+      color: "#fff",
+      border: "none",
+      borderRadius: "5px",
+      cursor: "pointer",
+      marginTop: "10px",
+    },
     title: {
       marginBottom: "15px",
     },
@@ -60,6 +70,10 @@ function Login() {
     } catch (err) {
       alert("Login failed");
     }
+  };
+
+  const handleRegisterRedirect = () => {
+    window.location.href = "/register"; // Redirects to register page
   };
 
   return (
@@ -82,6 +96,14 @@ function Login() {
 
         <button style={styles.button} type="submit">
           Login
+        </button>
+
+        <button
+          type="button"
+          style={styles.registerButton}
+          onClick={handleRegisterRedirect}
+        >
+          Register
         </button>
       </form>
     </div>
